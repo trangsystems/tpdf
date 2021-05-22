@@ -68,7 +68,7 @@ func getPdfCreator() string {
 	}
 
 	// Return default.
-	return "UniDoc - http://unidoc.io"
+	return "TrangSystems - https://trangsystems.org"
 }
 
 // SetPdfCreator sets the Creator attribute of the output PDF.

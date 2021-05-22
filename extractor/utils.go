@@ -6,10 +6,8 @@
 package extractor
 
 import (
-	"bytes"
 	"fmt"
 
-	"github.com/trangsystems/tpdf/common/license"
 	"github.com/trangsystems/tpdf/core"
 )
 
@@ -52,37 +50,6 @@ func maxFloat(a, b float64) float64 {
 		return a
 	}
 	return b
-}
-
-func procBuf(pt *PageText) {
-	if isTesting {
-		return
-	}
-
-	lk := license.GetLicenseKey()
-	if lk != nil && lk.IsLicensed() {
-		return
-	}
-	fmt.Printf("Unlicensed copy of unidoc\n")
-	fmt.Printf("To get rid of the watermark and keep entire text - Please get a license on https://unidoc.io\n")
-
-	var buf bytes.Buffer
-	buf.WriteString(pt.viewText)
-
-	s := "- [Unlicensed UniDoc - Get a license on https://unidoc.io]"
-	if buf.Len() > 100 {
-		s = "... [Truncated - Unlicensed UniDoc - Get a license on https://unidoc.io]"
-		buf.Truncate(buf.Len() - 100)
-	}
-	buf.WriteString(s)
-	pt.viewText = buf.String()
-
-	if len(pt.marks) > 200 {
-		pt.marks = pt.marks[:200]
-	}
-	if len(pt.viewMarks) > 200 {
-		pt.viewMarks = pt.viewMarks[:200]
-	}
 }
 
 // truncate returns the first `n` characters in string `s`.

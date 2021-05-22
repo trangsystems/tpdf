@@ -358,7 +358,7 @@ func (img *Image) ToJBIG2Image() (*core.JBIG2Image, error) {
 	return core.GoImageToJBIG2(goImg, core.JB2ImageAutoThreshold)
 }
 
-// ToGoImage converts the unidoc Image to a golang Image structure.
+// ToGoImage converts the  tpdf Image to a golang Image structure.
 func (img *Image) ToGoImage() (goimage.Image, error) {
 	common.Log.Trace("Converting to go image")
 	bounds := goimage.Rect(0, 0, int(img.Width), int(img.Height))
@@ -408,10 +408,10 @@ type ImageHandler interface {
 	// Read any image type and load into a new Image object.
 	Read(r io.Reader) (*Image, error)
 
-	// NewImageFromGoImage loads a RGBA unidoc Image from a standard Go image structure.
+	// NewImageFromGoImage loads a RGBA  tpdf Image from a standard Go image structure.
 	NewImageFromGoImage(goimg goimage.Image) (*Image, error)
 
-	// NewGrayImageFromGoImage loads a grayscale unidoc Image from a standard Go image structure.
+	// NewGrayImageFromGoImage loads a grayscale  tpdf Image from a standard Go image structure.
 	NewGrayImageFromGoImage(goimg goimage.Image) (*Image, error)
 
 	// Compress an image.
@@ -421,7 +421,7 @@ type ImageHandler interface {
 // DefaultImageHandler is the default implementation of the ImageHandler using the standard go library.
 type DefaultImageHandler struct{}
 
-// NewImageFromGoImage creates a new RGBA unidoc Image from a golang Image.
+// NewImageFromGoImage creates a new RGBA  tpdf Image from a golang Image.
 // If `goimg` is grayscale (*goimage.Gray) then calls NewGrayImageFromGoImage instead.
 func (ih DefaultImageHandler) NewImageFromGoImage(goimg goimage.Image) (*Image, error) {
 	b := goimg.Bounds()
@@ -480,7 +480,7 @@ func (ih DefaultImageHandler) NewImageFromGoImage(goimg goimage.Image) (*Image, 
 	return &imag, nil
 }
 
-// NewGrayImageFromGoImage creates a new grayscale unidoc Image from a golang Image.
+// NewGrayImageFromGoImage creates a new grayscale  tpdf Image from a golang Image.
 func (ih DefaultImageHandler) NewGrayImageFromGoImage(goimg goimage.Image) (*Image, error) {
 	b := goimg.Bounds()
 

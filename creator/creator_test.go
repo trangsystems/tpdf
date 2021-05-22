@@ -2037,7 +2037,7 @@ func TestHeadersAndFooters(t *testing.T) {
 
 	c.Draw(ch1)
 
-	// Make unidoc headers and footers.
+	// Make  tpdf headers and footers.
 	addHeadersAndFooters(c)
 
 	testWriteAndRender(t, c, "4_headers.pdf")

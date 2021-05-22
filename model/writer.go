@@ -68,7 +68,7 @@ func getPdfCreator() string {
 	}
 
 	// Return default.
-	return "TrangSystems - https://trangsystems.org"
+	return "Trang Systems - https://trangsystems.org"
 }
 
 // SetPdfCreator sets the Creator attribute of the output PDF.

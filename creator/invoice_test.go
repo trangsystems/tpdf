@@ -102,7 +102,7 @@ func TestInvoiceAdvanced(t *testing.T) {
 	invoice := c.NewInvoice()
 
 	// Set invoice title.
-	invoice.SetTitle("Unidoc Invoice")
+	invoice.SetTitle(" tpdf Invoice")
 
 	// Customize invoice title style.
 	titleStyle := invoice.TitleStyle()

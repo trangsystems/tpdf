@@ -3,7 +3,7 @@
  * file ' ', which is part of this source code package.
  */
 
-// Package strutils provides convenient functions for string processing in unidoc internally.
+// Package strutils provides convenient functions for string processing in  tpdf internally.
 package strutils
 
 import (

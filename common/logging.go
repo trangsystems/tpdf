@@ -141,7 +141,7 @@ func (l ConsoleLogger) output(f io.Writer, prefix string, format string, args ..
 
 var Log Logger = DummyLogger{}
 
-// SetLogger sets 'logger' to be used by the unidoc unipdf library.
+// SetLogger sets 'logger' to be used by the  tpdf unipdf library.
 func SetLogger(logger Logger) {
 	Log = logger
 }

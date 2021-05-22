@@ -870,7 +870,7 @@ func (c *Creator) NewCurve(x1, y1, cx, cy, x2, y2 float64) *Curve {
 	return newCurve(x1, y1, cx, cy, x2, y2)
 }
 
-// NewImage create a new image from a unidoc image (model.Image).
+// NewImage create a new image from a  tpdf image (model.Image).
 func (c *Creator) NewImage(img *model.Image) (*Image, error) {
 	return newImage(img)
 }

@@ -55,7 +55,7 @@ type Image struct {
 	encoder core.StreamEncoder
 }
 
-// newImage create a new image from a unidoc image (model.Image).
+// newImage create a new image from a  tpdf image (model.Image).
 func newImage(img *model.Image) (*Image, error) {
 	// Image original size in points = pixel size.
 	width := float64(img.Width)

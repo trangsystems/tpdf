@@ -3,7 +3,7 @@
 package main
 
 // Utility to generate static maps of glyph <-> rune conversions for a glyphlist.
-// This variant of the utility relies on text files in the unidoc source tree
+// This variant of the utility relies on text files in the  tpdf source tree
 //  ../../glyphlist.txt
 //  ../../texglyphlist.txt
 //  ../../additional.txt

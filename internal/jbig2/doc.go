@@ -1,6 +1,6 @@
 /*
  * This file is subject to the terms and conditions defined in
- * file 'LICENSE.md', which is part of this source code package.
+ * file ' ', which is part of this source code package.
  */
 
 // Package jbig2 provides the jbig2 standard image Encoder and Decoder.

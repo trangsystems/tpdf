@@ -16,7 +16,7 @@
 /*
  * Copyright (c) 2018 FoxyUtils ehf. to modifications of the original.
  * Modifications of the original file are subject to the terms and conditions
- * defined in file 'LICENSE.md', which is part of this source code package.
+ * defined in file ' ', which is part of this source code package.
  */
 
 package fonts
